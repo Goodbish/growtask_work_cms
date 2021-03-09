@@ -1,0 +1,107 @@
+.experience {
+    padding: rem(120px) rem(90px) 0 rem(64px);
+
+
+    &__content {
+        padding-top: rem(60px);
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: rem(15px) rem(42px) rem(375px);
+        grid-template-rows: rem(35px) minmax(rem(129px), auto) minmax(rem(129px), auto);
+        grid-auto-rows: minmax(rem(245px), auto);
+        row-gap: rem(45px);
+        grid-template-areas: 
+        "sideline . title"
+        "sideline item1 item1"
+        "sideline item2 item2";
+    }
+
+    &__sideline {
+        grid-area: sideline;
+        position: absolute;
+        left: 8px;
+        place-self: center;
+        top: 0;
+    }
+
+    &__title {
+        grid-area: title;
+
+        @include title-ml;
+    }
+
+    &__icon {
+        grid-area: icn; // icon | refers to item
+
+        position: relative;
+        padding-left: rem(14px);
+        z-index: 1;
+        padding-top: 6px;
+        @include before-circle;
+
+        &::before {
+            top: 0%;
+            left: -1%;
+        }
+
+        &-img {
+            position: absolute;
+            top: rem(14px);
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: grid;
+        grid-template-columns: rem(42px) rem(36px) auto;
+        grid-template-rows: rem(39px) auto;
+        row-gap: rem(12px);
+        // column-gap: rem(20px);
+        grid-template-areas:
+            "line icn item_title"
+            ". txt txt";
+
+        &_1 {
+            grid-area: item1;
+        }
+
+        &_2 {
+            grid-area: item2;
+        }
+
+        &-title {
+            grid-area: item_title;
+            padding-left: rem(20px);
+
+
+            & h5 {
+                @include title-s;   
+            }
+
+            & p {
+                @include small-text;
+            }
+        }
+
+        &-text {
+            grid-area: txt;
+            @include small-text;
+        }
+
+        &-sideline {
+            position: absolute;
+            top: rem(18px);
+            width: rem(42px);
+            border: none;
+            height: 1px;
+            color: #000; /* old IE */
+            background-color: #000; /* Modern Browsers */
+        }
+    }
+}

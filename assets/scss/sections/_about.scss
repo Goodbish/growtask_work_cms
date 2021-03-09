@@ -1,0 +1,99 @@
+.about {
+    padding-top: rem(120px);
+    padding-right: rem(100px);
+    display: grid;
+    justify-items: start;
+    grid-template-columns: rem(400px) auto;
+    grid-template-rows: minmax(rem(245px), auto) minmax(rem(255px), auto);
+    grid-auto-rows: minmax(rem(245px), auto);
+    column-gap: 70px;
+    row-gap: 40px;
+    grid-template-areas: 
+        "photo info"
+        "photo job";
+    
+    &__photo {
+        grid-area: photo;
+    }
+
+    &__info {
+        grid-area: info
+    }
+
+    &__job {
+        grid-area: job;
+    }
+
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: rem(400px);
+        max-height: rem(800px);
+    }
+
+    &__upper-title {
+        @include upper-title-m-with-circle;
+    }
+
+    &__title {
+        @include title-l;
+        padding-top: rem(6px);
+    }
+
+    &__line {
+        height: 0;
+        width: rem(60px);
+        border: 2px solid $main-color;
+    }
+
+    &__info-text {
+        padding-top: rem(20px);
+        font-size: $fs-m;
+        line-height: rem(21px);
+        font-weight: 500;
+    }
+
+    &__job {
+        display: grid;
+        grid-template: repeat(2, minmax(rem(115px), auto)) / repeat(2, minmax(rem(260px), auto));
+        column-gap: rem(50px);
+        row-gap: rem(20px);
+        grid-auto-rows: 1fr;
+
+        &-title {
+            @include title-m;
+            padding-bottom: rem(6px);
+        }
+
+        &-text {
+            font-size: $fs-xs;
+            line-height: rem(18px);
+            font-weight: 500;
+        }
+
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: rem(40px) rem(200px);
+        column-gap: rem(20px);
+    }
+
+    &__icon {
+        position: relative;
+        padding-left: rem(14px);
+        z-index: 1;
+        padding-top: 6px;
+        @include before-circle;
+
+        &::before {
+            top: 0%;
+            left: -1%;
+        }
+
+        &-img {
+            position: absolute;
+            top: rem(14px);
+        }
+    }
+}

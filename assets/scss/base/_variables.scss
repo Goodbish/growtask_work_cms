@@ -1,0 +1,21 @@
+
+$main-color: #FFA501;
+
+$base: 4;
+
+$fs-xs: 12px;
+$fs-s: 14px;
+$fs-m: 16px;
+$fs-ml: 20px;
+$fs-mxl: 24px;
+$fs-l: 36px;
+$fs-xl: 48px;
+
+$base-font: 16;
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($base-font)}rem;
+}

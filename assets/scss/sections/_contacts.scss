@@ -1,0 +1,144 @@
+.contacts {
+    padding: rem(120px) rem(35px) rem(91px) rem(52px);
+
+    display: grid;
+    grid-template-columns: rem(400px) rem(585px);
+    column-gap: rem(68px);
+
+    &__image {
+        object-fit: cover;
+        height: rem(600px);
+        width: 25rem;
+        max-height: 50rem;
+    }
+
+    &__upper-title {
+        @include upper-title-m-with-circle;
+    }
+
+    &__title {
+        @include title-l;
+        padding-top: rem(6px);
+    }
+
+    &__line {
+        height: 0;
+        width: rem(60px);
+        border: 2px solid $main-color;
+    }
+
+    &__text {
+        padding: rem(20px) 0;
+        @include title-s;
+    }
+
+    &__social-links {
+        display: flex;
+        width: rem(135px);
+        justify-content: space-between;
+    }
+
+    &__icon {
+        width: rem(30px);
+        height: rem(30px);
+    }
+
+    &__form {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: rem(45px) rem(190px);
+        grid-template-areas: 
+        "name email"
+        "text text";
+        column-gap: rem(25px);
+        row-gap: rem(30px);
+    }
+
+    &__form-item {
+
+        &_name {
+            grid-area: name;
+        }
+        &_email {
+            grid-area: email;
+        }
+        &_text {
+            grid-area: text;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        height: 163px;
+    }
+
+    &__input {
+        width: 100%;
+        font-size: $fs-xs;
+        line-height: rem(18px);
+        padding: rem(5px) rem(20px) rem(13px) rem(8px);
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: #000;
+        }
+
+        &::selection {
+            background-color: transparent;
+        }
+
+    }
+
+    &__border {
+        padding-left: rem(12px);
+
+        &-text {
+            padding: 0 8px;
+            font-size: $fs-xs;
+            line-height: rem(18px);
+        }
+    }
+
+    &__button {
+        @include title-s;
+        background-color: $main-color;
+        padding: rem(12px) rem(26px);
+        outline: none;
+        transition: all 0.1s ease;
+        border: none;
+        order: 1;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(0.94);
+        }
+    }
+
+    &__send {
+        margin-top: rem(32px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.private-policy {
+    display: none;
+    // display: flex;
+    align-items: center;
+    order: 2;
+    max-width: 180px;
+
+    &__text {
+        display: block;
+        font-size: $fs-xs;
+        line-height: rem(18px);
+    }
+
+    &__input {
+        margin-right: 10px;
+    }
+}
+

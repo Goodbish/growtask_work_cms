@@ -1,0 +1,30 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/Background.jpg') no-repeat 50%/cover;
+    padding-top: rem(200px);
+
+    &__upper-title {
+        @include title-m;
+        position: relative;
+        padding-left: rem(10px);
+        z-index: 1;
+    }
+
+    &__title {
+        @include title-xl;
+        margin-top: rem(10px);
+    }
+
+    &__buttons {
+        margin-top: rem(25px);
+        display: flex;
+        width: rem(260px);
+    }
+
+    &__button {
+        @include title-m;
+        @include button;
+    }
+}
+

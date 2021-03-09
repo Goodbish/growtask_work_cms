@@ -1,0 +1,101 @@
+@mixin title-l {
+    font-weight: bold;
+    font-size: $fs-l; // 36px
+    line-height: rem(60px);
+}
+
+@mixin title-xl {
+    font-weight: bold;
+    font-size: $fs-xl; // 48px
+    line-height: rem(60px);
+}
+
+@mixin title-m {
+    font-weight: bold;
+    font-size: $fs-m; // 16px
+    line-height: rem(24px);
+}
+
+@mixin title-ml {
+    font-weight: bold;
+    font-size: $fs-ml; // 20px
+    line-height: rem(30px);
+}
+
+@mixin title-s {
+    font-weight: bold;
+    font-size: $fs-s; // 14px
+    line-height: rem(21px);
+}
+
+@mixin title-l_m {
+    font-size: rem(24px);
+    line-height: rem(36px);
+    padding-top: rem(20px);
+    padding-bottom: rem(15px);
+}
+
+@mixin button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: rem(13px);
+    padding-bottom: rem(12px);
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+        color: #000;
+    }
+
+    &_block {
+        background-color: $main-color;
+        padding: rem(12px) rem(25px);
+        margin-right: rem(44px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@mixin before-circle {
+    
+    &::before {
+        content: '';
+        width: rem(36px);
+        height: rem(36px);
+        background: $main-color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        top: -25%;
+        left: 0;
+    }
+}
+
+@mixin upper-title-m-with-circle {
+    @include title-m;
+    position: relative;
+    padding-left: rem(14px);
+    z-index: 1;
+    padding-top: 6px;
+
+    &::before {
+        top: 0;
+    }
+}
+
+@mixin upper-title-m-with-circle--center {
+    @include upper-title-m-with-circle;
+    padding-left: 0;
+
+    &::before {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
+    }
+}
+
+@mixin small-text {
+    font-size: $fs-xs;
+    font-weight: 500;
+    line-height: rem(18px);
+}

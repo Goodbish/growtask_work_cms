@@ -1,0 +1,39 @@
+.sidepanel {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: rem(340px);
+    z-index: 2;
+    top: rem(230px);
+    left: rem(50px);
+    align-items: center;
+
+    &__icon {
+        width: rem(20px);
+        height: rem(20px);
+
+        // &_rotate {
+        //     transform: rotate(90deg);
+        //     transform-origin: center center
+        // }
+    }
+
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #000;
+    }
+
+    &__text {
+        width: rem(20px);
+        height: rem(150px);
+
+        &_rotate {
+            height: rem(20px);
+            width: rem(150px);
+            display: block;
+            transform: rotate(-90deg) translate(-30%, -340%);
+        }
+    }
+}

@@ -1,0 +1,449 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .about {
+        padding-right: 0;
+        grid-template-columns: rem(400px) rem(500px);
+        column-gap: rem(40px);
+
+        &__job {
+            grid-template: repeat(2, minmax(rem(115px), auto)) / repeat(2, minmax(rem(250px), auto));
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        &__item {
+            grid-template-columns: rem(40px) rem(195px);
+        }
+    }
+
+    .experience {
+        padding: rem(120px) 0 0 0;
+
+        &__content {
+            justify-content: space-around;
+        }
+    }
+
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__content {
+            grid-template-columns: repeat(3, rem(280px));
+            grid-template-rows: repeat(3, rem(280px));
+            grid-template-areas: 
+            "img1 img2 img3"
+            "img4 img6 img6"
+            "img4 img5 img5";
+        }
+    }
+
+    .price {
+
+        &__content {
+            grid-template-columns: rem(339px) auto rem(339px);
+        }
+    }
+
+    .contacts {
+        padding: rem(120px) 0 rem(91px) 0;
+        grid-template-columns: rem(400px) auto;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .about {
+        &__title {
+            font-size: 30px;
+        }
+
+        grid-template-columns: rem(300px) rem(380px);
+        column-gap: rem(40px);
+
+        &__job {
+            grid-template-columns: rem(380px);
+            grid-auto-rows: minmax(rem(115px), auto);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__item {
+            grid-template-columns: rem(40px) rem(320px);
+        }
+    }
+
+    .experience {
+        padding: rem(60px) 0 0 0;
+
+        &__content {
+            flex-direction: column;
+            justify-content: inherit;
+            align-items: center;
+        }
+
+        &__item-wrapper {
+            // grid-template-columns: rem(50px) rem(375px);
+            margin-bottom: rem(40px);
+        }
+ 
+    }
+
+    .skills {
+
+
+        &__item {
+            flex-basis: calc(50% - 26px);
+
+            &-wrapper {
+                margin: rem(60px) rem(-2.5px) 0;
+            }
+        }
+
+
+    }
+
+    .progress {
+        justify-content: space-between;
+
+        &__item {
+            width: 100%;
+            flex-basis: calc(50% - 13px);
+        }
+
+        &__body {
+            width: 100%;
+        }
+    }
+
+    .portfolio {
+
+        &__content {
+            grid-template-columns: repeat(2, rem(265px));
+            grid-template-rows: repeat(4, rem(265px));
+            grid-template-areas: 
+            "img1 img2"
+            "img4 img2"
+            "img4 img3"
+            "img5 img6";
+        }
+    }
+
+    .price {
+
+        &__content {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(6, minmax(rem(44px), auto));
+            grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6";
+            row-gap: rem(20px);
+        }
+
+    }
+
+    .contacts {
+        padding: rem(120px) 0 rem(91px) 0;
+        grid-template-columns: auto;
+
+        &__photo {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .promo {
+        padding-top: rem(200px);
+
+        &__title {
+            font-size: 28px;
+            line-height: 39px;
+        }
+    }
+
+    .about {
+        padding-top: rem(40px);
+        padding-right: 0;
+        grid-template-columns: auto;
+        // grid-template-rows: minmax(rem(245px), auto) minmax(rem(255px), auto);
+        // grid-auto-rows: minmax(rem(245px), auto);
+        column-gap: 0;
+        row-gap: rem(40px);
+        grid-template-areas: 
+            "photo"
+            "info"
+            "job";
+
+        &__photo {
+            width: 100%;
+        }
+
+        &__img {
+            max-height: rem(340px);
+        }
+
+        &__job {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            grid-template-columns: rem(40px) rem(200px);
+        }
+    }
+
+    .experience {
+        padding: rem(40px) 0 0 0;
+        // &__item-wrapper {
+        //     grid-template-columns: rem(50px) rem(375px);
+        // }
+    }
+
+    .skills {
+
+        &__item {
+            width: 100%;
+        }
+    }
+
+    .portfolio {
+
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 rem(10px);
+    }
+
+    .hamburger {
+        right: rem(20px);
+    }
+
+    .promo {
+        background-position: 60%;
+        &__title {
+            font-size: 26px;
+        }
+
+        &__buttons {
+            margin-top: rem(32px);
+        }
+    }
+
+    .menu {
+
+        &__block {
+            width: rem(250px);
+            padding-left: rem(20px);
+        }
+    }
+
+
+    .about {
+        grid-template: 1fr;
+
+        &__title {
+            @include title-l_m;
+        }
+
+        &__job {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            grid-template-columns: rem(40px) rem(240px);
+        }
+    }
+
+    .section {
+
+        &__title {
+            @include title-l_m;
+            text-align: center;
+        }
+
+    }
+
+    .experience {
+
+        &__title {
+            margin-bottom: rem(35px);
+        }
+
+        &__item-wrapper {
+            grid-template-columns: rem(15px) rem(42px) rem(250px);
+        }
+
+        &__item {
+            grid-template-rows: auto auto;
+        }
+    }
+
+    .skills {
+        padding-top: rem(40px);
+
+        &__item {
+            flex-basis: inherit;
+            margin-bottom: rem(20px);
+
+            &-wrapper {
+                padding-top: rem(20px);
+                margin-top: 0;
+            }
+        }
+    }
+
+    .progress {
+        padding-top: rem(20px);
+
+        &__item {
+            flex-basis: inherit;
+            margin-bottom: rem(40px);
+        }
+    }
+
+    .portfolio {
+        padding-top: rem(40px);
+
+        &__content {
+            padding-top: rem(40px);
+            grid-template-columns: repeat(1, rem(280px));
+            grid-template-rows: repeat(6, rem(280px));
+            row-gap: rem(20px);
+            grid-template-areas: 
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6";
+        }
+    }
+
+    .price {
+        padding-top: rem(40px);
+
+        &__content {
+            padding-top: rem(20px);
+        }
+
+
+        &__item {
+            grid-template-columns: rem(15px) auto;
+            grid-template-rows: minmax(rem(21px), auto) minmax(rem(15px), auto);
+        }
+
+        &__title {
+            max-width: rem(157px);
+            @include title-s
+        }
+
+        &__cost {
+            @include title-s;
+        }
+    }
+
+    .contacts {
+        padding-top: rem(40px);
+
+        &__title {
+            @include title-l_m;
+        }
+
+        &__text {
+            font-size: $fs-s;
+            line-height: rem(21px);
+        }
+
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, rem(45px)) minmax(rem(190px), auto);
+            grid-template-areas: 
+            "name"
+            "email"
+            "text";
+        }
+
+        &__send {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__button {
+            margin-top: rem(20px);
+            order: 2;
+        }
+    }
+    .private-policy {
+        display: flex;
+        order: 1
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .menu {
+
+        &__block {
+            padding-top: 60px;
+            overflow: scroll;
+        }
+
+        &__link {
+            font-size: $fs-s;
+            line-height: rem(18px);
+
+            ::before {
+                top: rem(15px);
+                width: rem(12px);
+                height: rem(12px);
+            }
+        }
+
+        &__item {
+            margin-bottom: 5px;
+        }
+
+        &__social {
+            position: inherit;
+            margin: 0 auto;
+            padding-top: rem(20px);
+            left: unset;
+            bottom: unset;
+            transform: unset;
+        }
+    }
+}

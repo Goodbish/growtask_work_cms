@@ -1,0 +1,66 @@
+.price {
+    padding-top: rem(60px);
+
+    &__content {
+        padding-top: rem(60px);
+        display: grid;
+        grid-template-columns: rem(366px) auto rem(366px);
+        grid-template-rows: repeat(3, minmax(rem(44px), auto));
+        grid-template-areas: 
+        "item1 . item4"
+        "item2 . item5"
+        "item3 . item6";
+        row-gap: rem(15px);
+    }
+
+    &__item {
+
+        @for $i from 1 through 6 {
+            &_#{$i} {
+                grid-area: item#{$i};
+            }
+        }
+
+        position: relative;
+        display: grid;
+        grid-template-columns: rem(15px) minmax(rem(314px), auto);
+        grid-template-rows: rem(21px) minmax(rem(15px), auto);
+        grid-template-areas: 
+        "marker title-cost"
+        ". text";
+        column-gap: rem(10px);
+        row-gap: rem(5px);
+    }
+
+    &__marker {
+        grid-area: marker;
+
+        position: absolute;
+        top: rem(3px);
+        width: rem(15px);
+        height: rem(15px);
+        background-color: $main-color;
+        border-radius: 100%;
+    }
+
+    &__title-cost {
+        grid-area: title-cost;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include title-s;
+    }
+
+    &__cost {
+        @include title-s;
+    }
+
+    &__text {
+        grid-area: text;
+        @include small-text;
+        align-self: start;
+    }
+}
